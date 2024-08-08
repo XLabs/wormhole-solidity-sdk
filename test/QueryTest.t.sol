@@ -5,7 +5,7 @@
 pragma solidity ^0.8.4;
 
 import "forge-std/Test.sol";
-import "../src/testing/helpers/QueryTest.sol";
+import "../src/testing/QueryTest.sol";
 
 contract TestQueryTest is Test {
     //

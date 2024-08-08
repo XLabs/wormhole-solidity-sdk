@@ -6,8 +6,8 @@ pragma solidity ^0.8.4;
 
 import "../src/QueryResponse.sol";
 import "forge-std/Test.sol";
-import "../src/testing/helpers/QueryTest.sol";
-import {WormholeMock} from "../src/testing/helpers/WormholeMock.sol";
+import "../src/testing/QueryTest.sol";
+import {WormholeMock} from "../src/testing/WormholeMock.sol";
 
 
 // @dev A non-abstract QueryResponse contract
