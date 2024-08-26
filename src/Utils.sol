@@ -40,3 +40,13 @@ function keccak256Word(
     hash := keccak256(scratchSpacePtr, wordSize)
   }
 }
+
+/**
+ * Reverts with a given buffer data.
+ * Meant to be used to easily bubble up errors from low level calls when they fail.
+ */
+function forwardError(bytes memory err) pure {
+    assembly {
+      revert(add(err, 32), mload(err))
+    }
+}
