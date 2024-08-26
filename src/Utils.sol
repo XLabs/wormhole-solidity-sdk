@@ -16,3 +16,9 @@ function fromUniversalAddress(bytes32 universalAddr) pure returns (address addr)
         addr := universalAddr
     }
 }
+
+function forwardError(bytes memory err) pure {
+    assembly {
+      revert(add(err, 32), mload(err))
+    }
+}
