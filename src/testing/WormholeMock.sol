@@ -2,7 +2,7 @@
 
 pragma solidity ^0.8.13;
 
-import { IWormhole } from '../../interfaces/IWormhole.sol';
+import { IWormhole } from '../interfaces/IWormhole.sol';
 
 contract WormholeMock is IWormhole {
  constructor() {}
