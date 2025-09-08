@@ -43,7 +43,7 @@ uint16 emitterChainId; // The chain ID of the emitter(see constants/Chains.sol f
 bytes32 emitterAddress; // The address of the emitter(the format is chain-specific, but always limited to 32 bytes)
 uint64 sequence; // The sequence number of the VAA
 bytes calldata payload; // The payload of the VAA
-(emitterChainId, emitterAddress, sequence, payload) = VerificationLib.decodeVaaEssentialsCd(encodedVaa, offset);
+(emitterChainId, emitterAddress, sequence, payload) = VaaLib2.decodeVaaEssentialsCd(encodedVaa, offset);
 
 // 3. Decode the payload using your application-specific logic
 ```
@@ -81,7 +81,7 @@ bytes memory payload = ...;
 bytes memory body = encodeVaaBodyCd(timestamp, nonce, emitterChainId, emitterAddress, sequence, consistencyLevel, payload);
 bytes32 bodyHash = keccak256(body);
 
-// 2. Create the signature. This is not provided by VerificationLib, you must implement this yourself.
+// 2. Create the signature. This is not provided by VaaLib2, you must implement this yourself.
 bytes memory signatures = ...;
 
 // 3. Encode the header and VAA from the body and signature(s)
