@@ -10,9 +10,11 @@ import {
   keccak256SliceUnchecked
 } from "wormhole-sdk/Utils.sol";
 
-// ╭─────────────────────────────────────────────────╮
-// │ Library for encoding and decoding Wormhole VAAs │
-// ╰─────────────────────────────────────────────────╯
+// ╭────────────────────────────────────────────────────╮
+// │ Library for encoding and decoding Wormhole V1 VAAs │
+// ╰────────────────────────────────────────────────────╯
+
+// NOTE: This library will only work correctly for VAA version 1 messages
 
 // # VAA Format
 //
